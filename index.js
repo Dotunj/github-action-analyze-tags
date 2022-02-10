@@ -25,7 +25,7 @@ exec("git describe --tags", (err, stdout, stderr) => {
     core.info(`Revision is ${rev}`);
 
     //fetch the previous tag
-    exec(`git describe --tags ${rev}`, (err, stdout, stderr) => {
+    exec(`git describe --abbrev=0 --tags ${rev}`, (err, stdout, stderr) => {
       if (err) {
         core.error(stderr);
         process.exit(1);
@@ -48,7 +48,9 @@ exec("git describe --tags", (err, stdout, stderr) => {
 
           core.info(`Highest Tag is ${highestTag}`);
 
-          let { compareWithPrevious, compareWithHighest } = [
+          let compareWithPrevious, compareWithHighest;
+
+          [compareWithPrevious, compareWithHighest] = [
             compareSemVersion(currentTag, previousTag),
             compareSemVersion(currentTag, highestTag),
           ];
@@ -62,6 +64,8 @@ exec("git describe --tags", (err, stdout, stderr) => {
           ) {
             shouldPublish = true;
           }
+
+          core.info(`Should Publish is ${shouldPublish}`);
 
           core.setOutput("current_tag", currentTag);
           core.setOutput("previous_tag", previousTag);
