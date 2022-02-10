@@ -1,0 +1,23 @@
+{
+  "name": "compare-tags-actions",
+  "version": "0.0.1",
+  "description": "Github Action Plugin for comparing the current tag against the previous tag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dotunj/compare-tags-actions.git"
+  },
+  "keywords": [],
+  "author": "Dotun Jolaoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dotunj/compare-tags-actions/issues"
+  },
+  "homepage": "https://github.com/Dotunj/compare-tags-actions#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0"
+  }
+}
