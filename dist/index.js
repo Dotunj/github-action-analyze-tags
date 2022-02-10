@@ -1742,7 +1742,10 @@ exec("git describe --tags", (err, stdout, stderr) => {
           let shouldPublish = false;
 
           //We should only only publish if the current tag is greater than the previous tag and equal or greater than the highest tag
-          if ([1].includes(compareWithPrevious) && [1, 0].includes(compareWithHighest)) {
+          if (
+            [1].includes(compareWithPrevious) &&
+            [1, 0].includes(compareWithHighest)
+          ) {
             shouldPublish = true;
           }
 
