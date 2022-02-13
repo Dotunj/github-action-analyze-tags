@@ -1741,22 +1741,22 @@ exec("git describe --tags", (err, stdout, stderr) => {
             compareSemVersion(currentTag, highestTag),
           ];
 
-          let shouldPublish = false;
+          let isCurrentTagHighest = false;
 
-          //We should only only publish if the current tag is greater than the previous tag and equal or greater than the highest tag
+          //current tag should only be the highest if it is greater than the previous tag and equal or greater to the highest tag
           if (
             [1].includes(compareWithPrevious) &&
             [1, 0].includes(compareWithHighest)
           ) {
-            shouldPublish = true;
+            isCurrentTagHighest = true;
           }
 
-          core.info(`Should Publish is ${shouldPublish}`);
+          core.info(`is Current Tag the Highest ${isCurrentTagHighest}`);
 
           core.setOutput("current_tag", currentTag);
           core.setOutput("previous_tag", previousTag);
           core.setOutput("highest_tag", highestTag);
-          core.setOutput("should_publish", shouldPublish);
+          core.setOutput("is_current_tag_the_highest", isCurrentTagHighest);
           process.exit(0);
         }
       );

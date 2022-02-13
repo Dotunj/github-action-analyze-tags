@@ -1,22 +1,26 @@
 {
-  "name": "compare-tags-actions",
-  "version": "0.0.1",
-  "description": "Github Action Plugin for comparing the current tag against the previous tag",
+  "name": "github-action-analyze-tags",
+  "version": "0.1.0",
+  "description": "Github Action Plugin for providing the current, previous and highest tag",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dotunj/compare-tags-actions.git"
+    "url": "git+https://github.com/Dotunj/github-action-analyze-tags"
   },
-  "keywords": [],
+  "keywords": [
+    "actions",
+    "github",
+    "tags"
+  ],
   "author": "Dotun Jolaoso",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dotunj/compare-tags-actions/issues"
+    "url": "https://github.com/Dotunj/github-action-analyze-tags/issues"
   },
-  "homepage": "https://github.com/Dotunj/compare-tags-actions#readme",
+  "homepage": "https://github.com/Dotunj/github-action-analyze-tags#readme",
   "dependencies": {
     "@actions/core": "^1.6.0"
   }

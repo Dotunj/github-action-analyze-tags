@@ -1,15 +1,15 @@
-name: 'Compare Tags'
-description: 'Get the latest, previous and highest tag from git and outputs that for use in other actions'
+name: Analyze Tags
+description: Get the current, previous and highest tag from git and outputs that for use in other actions
 branding:
   icon: 'tag'
   color: 'gray-dark'
 outputs:
   current_tag:
-    description: 'The current tag'
+    description: The current tag
   previous_tag:
-    description: 'The previous tag'
+    description: The previous tag
   highest_tag:
-    description: 'The highest tag in the repository'
+    description: The highest tag in the repository
 runs:
   using: 'node12'
   main: 'dist/index.js'
