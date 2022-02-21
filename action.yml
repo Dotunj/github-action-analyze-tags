@@ -6,8 +6,6 @@ branding:
 outputs:
   current_tag:
     description: The current tag
-  previous_tag:
-    description: The previous tag
   highest_tag:
     description: The highest tag in the repository
 runs:

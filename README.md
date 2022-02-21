@@ -10,7 +10,6 @@ It would be more useful to use the output from this action to conditionally trig
 |    NAME                          |                                               DESCRIPTION                                               |   TYPE   |
 | ------------                     | ------------------------------------------------------------------------------------------------------  | -------- |
 | `current_tag`                    | The current tag in the repository.                                                                         | `string` |
-| `previous_tag`                   | The previous tag in the repository.                                                                        | `string` |
 | `highest_tag`                    | The highest tag in the repository.                                                                         | `string` |
 | `is_current_tag_the_highest`     | Determines if the current tag is the highest tag so far in the repository                                  | `boolean` |
 
