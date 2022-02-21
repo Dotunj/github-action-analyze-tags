@@ -1,5 +1,5 @@
 name: Analyze Tags
-description: Get the current, previous and highest tag from git and outputs that for use in other actions
+description: Get the current and highest tag from git and outputs that for use in other actions
 branding:
   icon: 'tag'
   color: 'gray-dark'
